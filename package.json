@@ -9,6 +9,7 @@
     "middlewares",
     "promise",
     "promises",
+    "axios",
     "async",
     "async functions",
     "webservice",
