@@ -3,22 +3,20 @@
       "development": {
         "presets": [
           "env"
-        ]
+        ],
+        "plugins": ["transform-object-rest-spread"]
       },
       "production": {
         "presets": [
           "env"
-        ]
+        ],
+        "plugins": ["transform-object-rest-spread"]
       },
       "test": {
         "presets": [
           "env"
-        ]
-      },
-      "es": {
-        "presets": [
-          ["env", { "modules": false }]
-        ]
+        ],
+        "plugins": ["transform-object-rest-spread"]
       }
     }
   }
