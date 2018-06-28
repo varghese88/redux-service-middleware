@@ -1,8 +1,19 @@
 {
   "name": "redux-service-middleware",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A Redux middleware for easy service integration",
   "main": "./dist/index.js",
+  "keywords": [
+    "redux",
+    "middleware",
+    "middlewares",
+    "promise",
+    "promises",
+    "async",
+    "async functions",
+    "webservice",
+    "api"
+  ],
   "scripts": {
     "prepare": "npm run build",
     "precommit": "echo 'Running pre-commit hooks...' && npm run test",
@@ -16,9 +27,8 @@
     "type": "git",
     "url": "git+https://github.com/varghese88/redux-service-middleware.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Varghese John",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/varghese88/redux-service-middleware/issues"
   },
