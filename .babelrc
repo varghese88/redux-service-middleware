@@ -1,0 +1,24 @@
+{
+    "env": {
+      "development": {
+        "presets": [
+          "env"
+        ]
+      },
+      "production": {
+        "presets": [
+          "env"
+        ]
+      },
+      "test": {
+        "presets": [
+          "env"
+        ]
+      },
+      "es": {
+        "presets": [
+          ["env", { "modules": false }]
+        ]
+      }
+    }
+  }
