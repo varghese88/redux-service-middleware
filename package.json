@@ -1,0 +1,23 @@
+{
+  "name": "redux-service-middleware",
+  "version": "1.0.0",
+  "description": "A Redux middleware for easy service integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varghese88/redux-service-middleware.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varghese88/redux-service-middleware/issues"
+  },
+  "homepage": "https://github.com/varghese88/redux-service-middleware#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
