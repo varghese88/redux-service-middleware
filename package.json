@@ -1,6 +1,6 @@
 {
   "name": "redux-service-middleware",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Redux middleware for easy service integration",
   "main": "index.js",
   "scripts": {
