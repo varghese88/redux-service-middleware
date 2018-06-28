@@ -24,7 +24,7 @@ const config = {
 baseConfig - define the basic web service configuartion
 serviceConfig - collection of object in which each object define redux action as key and the web service details as value
 
-Additional features - Third party dependency injection, validate the action before dispatch, async dispatct( similar to thunk)
+Additional features - Third party dependency injection, validate the action before dispatch, async dispatch( similar to thunk)
 
 Middleware usage
 
