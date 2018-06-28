@@ -18,7 +18,7 @@ export const dataService =
             })
             .catch( error => {
                 next({
-                    type:`${type}_ERROR`,
+                    type:`${type}_REJECTED`,
                     payload:error
                 })
             });
