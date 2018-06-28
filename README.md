@@ -48,9 +48,13 @@ const getPostData = () =>({
     process({dispatch}){
         dispatch({ type:"TEST_DATA"})
     },
-    payload:{}
+    payload:{
+        userId:45666
+    }
 })
 ```
+Internaly this middleware uses axios as httpclient and currently it supports rest GET and POST method
+Pass parms/ body data in payload as object
 
 
 Given a single action with an async payload, the middleware transforms the action to a separate a pending action and a separate fulfilled/rejected action, representing the states of the async action.
