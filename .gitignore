@@ -61,5 +61,4 @@ typings/
 .next
 .idea/**
 .idea/vcs.xml
-dist/**
 .vscode/**

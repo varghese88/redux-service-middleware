@@ -1,6 +1,6 @@
 {
   "name": "redux-service-middleware",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "A Redux middleware for easy service integration",
   "main": "./dist/index.js",
   "keywords": [
@@ -35,7 +35,8 @@
   },
   "homepage": "https://github.com/varghese88/redux-service-middleware#readme",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "user": "0.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
