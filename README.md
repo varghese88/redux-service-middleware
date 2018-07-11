@@ -1,6 +1,6 @@
 # Redux-Service-Middleware
 
-Redux Promise Middleware enables simple to integrate webservice call easily through [Redux](http://redux.js.org). 
+Redux Service Middleware enables simple to integrate webservice call easily through [Redux](http://redux.js.org). 
 
 First we need to define the service configuration
 
@@ -21,10 +21,15 @@ const config = {
     }
 }
 ```
-baseConfig - define the basic web service configuartion
-serviceConfig - collection of object in which each object define redux action as key and the web service details as value
+- baseConfig - define the basic web service configuartion
+- serviceConfig - collection of object in which each object define redux action as key and the web service details as value
 
-Additional features - Third party dependency injection, validate the action before dispatch, async dispatch( similar to thunk)
+> Additional features 
+ - Third party dependency injection
+ - validate the action before dispatch 
+ - async dispatch( similar to thunk)
+ - promise payload
+ - dependency injection on validate, process and payload 
 
 Middleware usage
 
@@ -36,6 +41,8 @@ const store = createStore(
 ```
 Define the redux action
 ```js
+example 1
+
 const getPostData = () =>({
     type:'POST_DATA',
     validate({dispatch, accept, reject }){
@@ -52,9 +59,30 @@ const getPostData = () =>({
         userId:45666
     }
 })
+
+example 2
+Dependency Injection on process, validate and payload
+
+const getPostData = () =>({
+    type:'POST_DATA',
+    validate({dispatch, accept, reject, uuid }){
+        if(check){
+            accept();
+        } else {
+            reject();
+        }
+    },
+    process({dispatch, uuid }){
+        dispatch({ type:"TEST_DATA", payload:{uuid}})
+    },
+    payload({ uuid }){
+         return {uuid};
+    }
+})
 ```
-Internaly this middleware uses axios as httpclient and currently it supports rest GET and POST method
-Pass parms/ body data in payload as object
+- Internaly this middleware uses axios as httpclient
+- Currently it supports **REST** GET and POST method
+- Pass parms - **GET**/ body - **POST** or **PUT** in payload as object
 
 
 Given a single action with an async payload, the middleware transforms the action to a separate a pending action and a separate fulfilled/rejected action, representing the states of the async action.
