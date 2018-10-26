@@ -5,19 +5,28 @@ export const dataService =
         next =>
             action => {
 
-    const { type, payload={}, process, validate} = action;
+    const { type, payload={}, process, validate, complete } = action;
     const { baseConfig, serviceConfig } = config || {};
+
     const url = serviceConfig && serviceConfig[type] ? serviceConfig[type]['url'] : '';
     const method = serviceConfig && serviceConfig[type] ? serviceConfig[type]['method'] : '';
+
     const isPayloadFn = payload && typeof payload === 'function';
     const content =  isPayloadFn? payload({...dependencies}): payload;
+
     const isPayloadPromise = content && (typeof content === 'object' || typeof content === 'function') && typeof content.then === 'function';
 
     const promiseSuccess = response => {
+        if(complete){
+            complete({response, ...dependencies, dispatch, getState })
+        }
         next({ type:`${type}_FULFILLED`, payload:response});
     };
 
     const promiseFailure = error => {
+        if(complete){
+            complete({error, ...dependencies, dispatch, getState })
+        }
         next({
             type:`${type}_REJECTED`,
             payload:error

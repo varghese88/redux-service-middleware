@@ -55,6 +55,9 @@ const getPostData = () =>({
     process({dispatch}){
         dispatch({ type:"TEST_DATA"})
     },
+    complete({ dispatch, resposne, error }){
+        console.log(response)
+    }
     payload:{
         userId:45666
     }
